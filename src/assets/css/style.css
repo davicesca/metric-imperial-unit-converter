@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: #FBF7EE;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.dark-mode {
+    background: #1F2937;
+}
+
+.conversion-form, .conversion-container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversion-form {
+    background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
+    color: #fff;
+}
+
+.color-mode-btn {
+    display: block;
+    background: none;
+    margin: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .5s ease;
+}
+
+.color-mode-btn:hover {
+    color: #1A1921;
+    transform: translateX(-10px);
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 44px;
+    font-weight: 800;
+    margin-bottom: 2em;
+}
+
+input:focus {
+    outline: none;
+}
+
+.length-input {
+    background: none;
+    border: none;
+    color: #fff;
+    width: 25%;
+    min-width: 400px;
+    font-size: 120px;
+    line-height: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.length-input::selection {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.length-input::-webkit-outer-spin-button,
+.length-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.length-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.conversion-container {
+    color: #1A1921;
+    justify-content: space-evenly;
+}
+
+body.dark-mode .conversion-container {
+    color: #fff;
+}
+
+.unit-conversion {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversion {
+    color: #4E4E4E;
+}
+
+body.dark-mode .conversion {
+    color: #D2D2D2;
+}
+
+.conversion-anim {
+    animation: conversion 1s ease forwards; 
+}
+
+@keyframes conversion {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1025px) {
+    .conversion-container {
+        flex-direction: row;
+    }
+
+    .conversion {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .conversion {
+        font-size: 16px;
+    }
+}
